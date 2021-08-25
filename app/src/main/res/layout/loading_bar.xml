@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_default"
     android:id="@+id/loading_bar"
-    android:visibility="visible">
+    android:visibility="gone">
 
     <TextView
         android:id="@+id/textView5"
