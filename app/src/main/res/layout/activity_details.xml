@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_default"
     tools:context=".ui.view.DetailsActivity">
 
     <ImageView
@@ -25,6 +26,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:textColor="@color/black"
+        android:fontFamily="@font/getschwifty"
         android:text="TextView"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,25 +89,27 @@
 
     <TextView
         android:id="@+id/results_status"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_info"
         android:layout_alignParentEnd="true"
-        android:textSize="15dp"
         android:text="ResultStatus"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/results_species"
         app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <TextView
-        android:textSize="15dp"
         android:id="@+id/results_species"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_info"
         android:layout_alignParentEnd="true"
         android:text="ResultSpecies"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/results_gender"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
 
