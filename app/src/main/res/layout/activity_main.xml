@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/getschwifty"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="Rick And Morty \n Wiki"
         android:textColor="@color/black"

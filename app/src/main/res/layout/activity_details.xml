@@ -7,12 +7,23 @@
     android:background="@drawable/background_default"
     tools:context=".ui.view.DetailsActivity">
 
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/pngs"
+        app:layout_constraintBottom_toBottomOf="@+id/image_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_info" />
+
     <ImageView
         android:id="@+id/image_info"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
+        android:padding="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,10 +36,11 @@
         android:layout_below="@+id/image_info"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:textColor="@color/black"
         android:fontFamily="@font/getschwifty"
+        android:gravity="center"
         android:text="TextView"
-        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:textSize="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,15 +48,16 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_info"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/upandown"
         android:text="Species:"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
@@ -52,12 +65,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_info"
-        android:layout_marginTop="36dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/upandown"
         android:text="Status:"
-        android:textSize="20dp"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="100dp"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
@@ -65,52 +80,57 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_info"
-        android:layout_marginTop="70dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:fontFamily="@font/upandown"
         android:text="Gender:"
-        android:textSize="20dp"
-       android:layout_marginStart="50dp"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/image_info"
         app:layout_constraintTop_toBottomOf="@+id/image_info" />
 
     <TextView
         android:id="@+id/results_gender"
-        android:textSize="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_info"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
         android:text="ResultGender"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/image_info"
         app:layout_constraintTop_toTopOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/results_status"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_info"
         android:layout_alignParentEnd="true"
         android:text="ResultStatus"
+        android:textColor="@color/black"
         android:textSize="15dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/results_species"
+
+        app:layout_constraintEnd_toEndOf="@+id/image_info"
         app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <TextView
         android:id="@+id/results_species"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_info"
         android:layout_alignParentEnd="true"
         android:text="ResultSpecies"
+        android:textColor="@color/black"
         android:textSize="15dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/results_gender"
+        app:layout_constraintEnd_toEndOf="@+id/results_gender"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <include layout="@layout/loading_bar" />
